@@ -109,7 +109,7 @@ body {
 
     font-family: var(--poppins);
     
-    background-color: var(--primary);
+    /* background-color: var(--primary); */
 }
 
 .title--1 {
