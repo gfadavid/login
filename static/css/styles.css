@@ -1,12 +1,12 @@
 :root {
     /* Fonts */
-    --poppins       : 'Poppins', Tahoma;
-    --light         : 100;
+    --poppins       : 'Roboto', Tahoma;
+    --light         : 300;
     --regular       : 400;
     --bold          : 700;
     /* --extra-bold    : 100; */
     /* Colors */
-    --primary       : #1135A7; /* Primary */
+    --primary       : #00b19d; /* Primary */
     --secondary     : #fcd12a;
     --color-3       : lightgreen;
     --color-4       : tomato;
@@ -14,7 +14,7 @@
     --white         : #ffffff;
     --black         : #000000;
     /* Grays */
-    --gray-1        : #cccccc;
+    --gray-1        : #707070; /* Color de fuentes */
     --gray-2        : #dddddd;
     --gray-3        : #444444;
     /* Values */
@@ -109,7 +109,7 @@ body {
 
     font-family: var(--poppins);
     
-    background-color: var(--primary);
+    /* background-color: var(--primary); */
 }
 
 .title--1 {
