@@ -109,7 +109,7 @@ body {
 
     font-family: var(--poppins);
     
-    /* background-color: var(--primary); */
+    background-color: var(--primary);
 }
 
 .title--1 {
@@ -144,9 +144,14 @@ body {
     font-size: 16px;
 }
 
-.login__title {
-    text-align: var(--center);
-    margin-bottom: 50px;
+.login__logo {
+    margin-bottom: 64px;
+}
+
+.login__logo__image {
+    background-color: var(--secondary);
+    margin-right: auto;
+    margin-left: auto;
 }
 
 /* .login__content {
@@ -212,7 +217,7 @@ a.forget-password {
     }
     
     /* Inicio "Login" */
-    .login__title {
+    .login__logo {
         text-align: left;
     }
 
@@ -223,7 +228,7 @@ a.forget-password {
     }
     
     .login__container {
-        flex: var(--grow-1) 0 50%;
+        flex: var(--grow-1) 0 500px;
         display: var(--flex);
         flex-direction: var(--direction);
         justify-content: var(--center);
@@ -236,7 +241,7 @@ a.forget-password {
 
     .login__image {
         display: block;
-        flex: 0 1 50%;
+        flex-grow: var(--grow-1)
     }
 
     .login__image img {
