@@ -6,17 +6,18 @@
     --bold          : 700;
     /* --extra-bold    : 100; */
     /* Colors */
-    --primary       : #00b19d; /* Primary */
-    --secondary     : #fcd12a;
+    --primary       : #00b19d;
+    --secondary     : #00cbb4;
     --color-3       : lightgreen;
     --color-4       : tomato;
     --color-5       : purple;
     --white         : #ffffff;
     --black         : #000000;
     /* Grays */
-    --gray-1        : #707070; /* Color de fuentes */
-    --gray-2        : #dddddd;
-    --gray-3        : #444444;
+    --gray-1        : #707070;
+    --gray-2        : #cccccc;
+    --gray-3        : #474747;
+    --gray-4        : #0000001a; /* Últimos dos carácteres representan la opacidad */
     /* Values */
     --zero          : 0;
     /* Spaces */
@@ -109,7 +110,7 @@ body {
 
     font-family: var(--poppins);
     
-    background-color: var(--primary);
+    /* background-color: var(--primary); */
 }
 
 .title--1 {
@@ -117,12 +118,15 @@ body {
     font-size: 28px;
 }
 
-/* .button--1 {
+button.button--1 { /* Override al selector en donde se reutiliza la clase */
+    background: var(--primary);
+    color: var(--white);
+    border: 1px solid var(--primary);
+}
 
-} */
-
-.text-uppercase {
-    text-transform: uppercase;
+button.is-primary:hover {
+    background: var(--secondary);
+    border: 1px solid var(--secondary);
 }
 
 .d-block {
@@ -145,11 +149,11 @@ body {
 }
 
 .login__logo {
-    margin-bottom: 64px;
+    margin-bottom: 14px;
 }
 
 .login__logo__image {
-    background-color: var(--secondary);
+    /* background-color: var(--secondary); */
     margin-right: auto;
     margin-left: auto;
 }
@@ -158,43 +162,100 @@ body {
     background-color: var(--color-3);
 } */
 
-/* .login__form {
-    background-color: var(--color-4);
+/* .login__content__text {
+
 } */
 
-.login__form__item:last-child {
-    margin-top: 20px; /* Número mágico */
+[class*="login__content__text"] {
+    line-height: 30px;
+    color: var(--gray-1);
+    font-size: 18px;
+    font-weight: var(--light);
+    margin-bottom: 0;
+    text-align: var(--center);
 }
 
-.login__form__label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 20px; /* Número mágico */
+.login__content__text--1 {
+    color: var(--primary);
+    font-size: 16px;
+}
+
+.login__form {
+    /* background-color: var(--color-4); */
+    margin-top: 14px;
+    text-align: var(--center);
+}
+
+.login__form__item__input,
+.button--1 {
+    padding: 12px 8px;
+    width: 340px;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: var(--light);
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid var(--gray-2);
+    border-radius: 5px;
+    transition: all .2s;
+    color: var(--gray-3);
+}
+
+.login__form__item__input:focus {
+    outline: none;
+    border: 1px solid var(--primary);
 }
 
 .login__button {
-    margin-top: 35px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: var(--center);
 }
 
 /* .login__footer {
     background-color: var(--color-5);
 } */
 
-.login__footer a {
-    color: var(--white)
-}
-
 .login__footer__item {
-    margin-top: 35px;
+    text-align: var(--center);
 }
 
-.login__footer__item:last-child,
-a.forget-password {
-    font-weight: var(--bold);
+.login__footer__item a {
+    color: var(--primary);
+    font-weight: var(--light);
 }
 
-a.forget-password {
-    color: var(--secondary);
+.login__footer__item a:hover {  /* Override a Bootstrap */
+    text-decoration: none;
+}
+
+.login__footer__item:last-child {
+    color: var(--gray-1);
+    font-size: 14px;
+    font-weight: var(--light);
+    line-height: 44px;
+    position: relative;
+}
+
+.login__footer__item:last-child::before {
+    content: '';
+    display: block;
+    width: 340px;
+    height: 1px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: var(--gray-4);
+}
+
+.forget-password {
+    font-size: 12px;
+    font-style: var(--light);
+    line-height: 38px;
+}
+
+.user-register {
+    text-transform: uppercase;
 }
 
 .login__image {
@@ -203,10 +264,6 @@ a.forget-password {
 /* Fin "Login" */
 
 /* Media Queries */
-@media screen and (min-width: 340px) {
-
-}
-
 @media screen and (min-width: 768px) {
     .d-block {
         display: inline-block;
@@ -247,14 +304,6 @@ a.forget-password {
     .login__image img {
         width: var(--w-100);
         height: var(--h-100);
-    }
-
-    .login__footer__item {
-        margin-top: 50px;
-    }
-
-    .login__footer__item:last-child {
-        font-size: 20px;
     }
     /* Fin "Login" */
 }
