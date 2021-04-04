@@ -19,7 +19,7 @@
     --gray-3        : #474747;
     --gray-4        : #0000001a; /* Últimos dos carácteres representan la opacidad */
     /* Values */
-    --zero          : 0;
+    --zero          : var(--zero);
     /* Spaces */
     --auto          : auto;
     /* Layout */
@@ -123,8 +123,8 @@ button.button--1 { /* Override al selector en donde se reutiliza la clase */
     color: var(--white);
     border: 1px solid var(--primary);
     font-weight: var(--bold);
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top: var(--zero);
+    margin-bottom: var(--zero);
 }
 
 button.is-primary:hover {
@@ -174,7 +174,7 @@ button.is-primary:hover {
     color: var(--gray-1);
     font-size: 18px;
     font-weight: var(--light);
-    margin-bottom: 0;
+    margin-bottom: var(--zero);
     text-align: var(--center);
 }
 
@@ -297,10 +297,10 @@ button.is-primary:hover {
 .login__carousel__image {
     background-color: hotpink;
     position: absolute;
-    /* top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    /* top: var(--zero);
+    right: var(--zero);
+    bottom: var(--zero);
+    left: var(--zero);
     margin: auto; */
     width: var(--w-100);
     height: var(--vh-100);
@@ -311,8 +311,15 @@ button.is-primary:hover {
     background-color: pink;
 }
 
+.carousel-indicators {
+    /* background-color: turquoise; */
+    justify-content: var(--start);
+    margin-right: 0;
+    margin-left: 40px;
+}
+
 .carousel-indicators li { /* Override Bootstrap */
-    margin: 5px;
+    margin: 0 5px;
     height: 13px;
     width: 13px;
     background-color: var(--white);
@@ -322,8 +329,35 @@ button.is-primary:hover {
     opacity: 1;
 }
 
-.carousel-indicators li.active {
+.carousel-indicators li.active { /* Override Bootstrap */
     background-color: var(--primary);
+}
+
+.login__carousel__content {
+    background-color: hotpink;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: var(--w-100);
+    height: var(--vh-100);
+    display: var(--flex);
+    flex-direction: var(--direction);
+    padding: 20px 40px;
+}
+
+.login__carousel__content p {
+    margin-bottom: 0;
+    text-align: right;
+}
+
+.login__carousel__content__top {
+    background-color: tomato;
+}
+
+.login__carousel__content__bottom {
+    background-color: seagreen;
+    margin-top: auto;
 }
 /* Fin Carousel (Bootstrap) */
 
