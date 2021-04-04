@@ -191,7 +191,6 @@ button.is-primary:hover {
 }
 
 .login__form__item:last-child {
-    display: inline-block;
     position: relative;
 }
 
@@ -212,7 +211,7 @@ button.is-primary:hover {
 .login__form__item__input,
 .button--1 {
     padding: 12px 8px;
-    width: 340px;
+    width: var(--w-100);
     line-height: 24px;
     font-size: 16px;
     font-weight: var(--light);
@@ -265,7 +264,7 @@ button.is-primary:hover {
 .login__footer__item:last-child::before {
     content: '';
     display: block;
-    width: 340px;
+    width: var(--w-100);
     height: 1px;
     margin-right: auto;
     margin-left: auto;
@@ -279,6 +278,7 @@ button.is-primary:hover {
 }
 
 .user-register {
+    display: block;
     text-transform: uppercase;
 }
 
@@ -320,6 +320,10 @@ button.is-primary:hover {
         max-width: 500px;
     }
 
+    .login__form__item:last-child {
+        display: inline-block;
+    }
+
     .login__image {
         display: block;
         flex-grow: var(--grow-1)
@@ -328,6 +332,15 @@ button.is-primary:hover {
     .login__image img {
         width: var(--w-100);
         height: var(--h-100);
+    }
+
+    .login__form__item__input,
+    .button--1 {
+        width: 340px;
+    }
+
+    .user-register {
+        display: inline-block;
     }
     /* Fin "Login" */
 }
