@@ -190,6 +190,25 @@ button.is-primary:hover {
     text-align: var(--center);
 }
 
+.login__form__item:last-child {
+    display: inline-block;
+    position: relative;
+}
+
+#view-eye {   
+    fill: var(--gray-2);
+    width: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+}
+
+#view-eye:hover {
+    stroke: currentColor;
+    cursor: pointer;
+}
+
 .login__form__item__input,
 .button--1 {
     padding: 12px 8px;
@@ -210,6 +229,7 @@ button.is-primary:hover {
     outline: none;
     border: 1px solid var(--primary);
 }
+
 
 .login__button {
     margin-top: 5px;
