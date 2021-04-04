@@ -282,10 +282,50 @@ button.is-primary:hover {
     text-transform: uppercase;
 }
 
-.login__image {
+.login__carousel {
     display: none;
 }
 /* Fin "Login" */
+
+/* Inicio Carousel (Bootstrap) */
+.carousel-inner {
+    background-color: var(--primary);
+    height: 100vh;
+    position: relative;
+}
+
+.login__carousel__image {
+    background-color: hotpink;
+    position: absolute;
+    /* top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto; */
+    width: var(--w-100);
+    height: var(--vh-100);
+}
+
+
+.login__carousel__image:nth-child(even) {
+    background-color: pink;
+}
+
+.carousel-indicators li { /* Override Bootstrap */
+    margin: 5px;
+    height: 13px;
+    width: 13px;
+    background-color: var(--white);
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.carousel-indicators li.active {
+    background-color: var(--primary);
+}
+/* Fin Carousel (Bootstrap) */
 
 /* Media Queries */
 @media screen and (min-width: 768px) {
@@ -324,14 +364,9 @@ button.is-primary:hover {
         display: inline-block;
     }
 
-    .login__image {
+    .login__carousel {
         display: block;
         flex-grow: var(--grow-1)
-    }
-
-    .login__image img {
-        width: var(--w-100);
-        height: var(--h-100);
     }
 
     .login__form__item__input,
