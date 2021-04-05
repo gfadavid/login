@@ -360,6 +360,10 @@ button.is-primary:hover {
 .login__carousel__content__bottom {
     background-color: seagreen;
     margin-top: auto;
+    margin-left: auto;
+    display: flex;
+    align-items: var(--center);
+    margin-right: 10px;
 }
 
 .login__carousel__button {
@@ -379,6 +383,27 @@ button.is-primary:hover {
     text-decoration: none;
     color: var(--primary);
     background: var(--white);
+}
+
+.login__carousel__social {
+    background-color: lightlbue;
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    margin-right: 40px;
+}
+
+.login__carousel__social__item {
+    background-color: lightcoral;
+}
+
+.login__carousel__social__item svg {
+    width: 50px;
+    fill: var(--white)
+}
+
+.login__carousel__social__item::nth-child(even) {
+    background-color: lightgreen;
 }
 /* Fin Carousel (Bootstrap) */
 
