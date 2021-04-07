@@ -386,19 +386,23 @@ button.is-primary:hover {
 }
 
 .login__carousel__social {
-    background-color: lightlbue;
+    background-color: lightblue;
     display: flex;
     justify-content: space-between;
-    width: 100px;
-    margin-right: 40px;
+    width: 150px;
+    margin-left: 20px;
 }
 
 .login__carousel__social__item {
     background-color: lightcoral;
 }
 
+.login__carousel__social__item:nth-child(even) {
+    background-color: lightgreen;
+}
+
 .login__carousel__social__item svg {
-    width: 50px;
+    width: 40px;
     fill: var(--white)
 }
 
