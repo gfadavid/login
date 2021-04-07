@@ -1,6 +1,6 @@
 :root {
     /* Fonts */
-    --poppins       : 'Roboto', Tahoma;
+    --roboto       : 'Roboto', Tahoma;
     --light         : 300;
     --regular       : 400;
     --bold          : 700;
@@ -8,7 +8,7 @@
     /* Colors */
     --primary       : #00b19d;
     --secondary     : #00cbb4;
-    --color-3       : lightgreen;
+    --third         : #f2f2f2;
     --color-4       : tomato;
     --color-5       : purple;
     --white         : #ffffff;
@@ -98,7 +98,7 @@ button:hover {
 input,
 button {
     border: none;
-    font-family: var(--poppins);
+    font-family: var(--roboto);
 }
 
 body {
@@ -108,7 +108,7 @@ body {
     flex-direction: var(--direction);
     min-height: var(--vh-100);
 
-    font-family: var(--poppins);
+    font-family: var(--roboto);
     
     /* background-color: var(--primary); */
 }
@@ -295,7 +295,7 @@ button.is-primary:hover {
 }
 
 .login__carousel__image {
-    background-color: hotpink;
+    /* background-color: hotpink; */
     position: absolute;
     /* top: var(--zero);
     right: var(--zero);
@@ -307,9 +307,9 @@ button.is-primary:hover {
 }
 
 
-.login__carousel__image:nth-child(even) {
+/* .login__carousel__image:nth-child(even) {
     background-color: pink;
-}
+} */
 
 .carousel-indicators {
     /* background-color: turquoise; */
@@ -333,8 +333,14 @@ button.is-primary:hover {
     background-color: var(--primary);
 }
 
+.carousel-fade .carousel-item.active,
+.carousel-item {
+    position: static; /* Override Bootstrap */
+    height: var(--vh-100);
+}
+
 .login__carousel__content {
-    background-color: hotpink;
+    /* background-color: hotpink; */
     position: absolute;
     top: 0;
     left: 0;
@@ -353,12 +359,12 @@ button.is-primary:hover {
     font-weight: var(--light);
 }
 
-.login__carousel__content__top {
+/* .login__carousel__content__top {
     background-color: tomato;
-}
+} */
 
 .login__carousel__content__bottom {
-    background-color: seagreen;
+    /* background-color: seagreen; */
     margin-top: auto;
     margin-left: auto;
     display: flex;
@@ -366,7 +372,8 @@ button.is-primary:hover {
     margin-right: 10px;
 }
 
-.login__carousel__button {
+.login__carousel__button,
+.login__carousel__copy__button {
     padding: 3px 22px;
     border-radius: 25px;
     border: 1px solid var(--white);
@@ -386,29 +393,77 @@ button.is-primary:hover {
 }
 
 .login__carousel__social {
-    background-color: lightblue;
+    /* background-color: lightblue; */
     display: flex;
     justify-content: space-between;
-    width: 150px;
+    width: 125px;
     margin-left: 20px;
 }
 
-.login__carousel__social__item {
+/* .login__carousel__social__item {
     background-color: lightcoral;
 }
 
 .login__carousel__social__item:nth-child(even) {
     background-color: lightgreen;
-}
+} */
 
 .login__carousel__social__item svg {
     width: 40px;
     fill: var(--white)
 }
 
-.login__carousel__social__item::nth-child(even) {
+/* .login__carousel__social__item::nth-child(even) {
     background-color: lightgreen;
+} */
+
+.login__carousel__copy {
+    /* background-color: lime; */
+    position: absolute;
+    z-index: 10;
+    top: 40%;
+    transform:translateY(-40%);
+    left: 40px;
+    width: 350px;
 }
+
+.login__carousel__copy__title {
+    /* background-color: var(--primary); */
+    font-family: var(--roboto);
+    font-size: 36px;
+    font-weight: var(--light);
+    line-height: 42px;
+    margin-bottom: 20px;
+}
+
+/* .login__carousel__copy__description {
+    background-color: lightsalmon;
+} */
+
+.login__carousel__copy__button {
+    background-color: var(--secondary);
+    margin-left: 0; /* Override a la reutilización */
+    padding: 0; /* Override a la reutilización */
+
+    border-radius: 48px 48px 48px 48px;
+    background-color: var(--third);
+    color: var(--primary);
+    text-transform: uppercase;
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    text-align: var(--center);
+}
+
+.login__carousel__copy__button:hover {
+    opacity: .75;
+    transition: all .5s;
+    text-decoration: none;
+}
+
+/* h2 {
+} */
 /* Fin Carousel (Bootstrap) */
 
 /* Media Queries */
