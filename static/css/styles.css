@@ -316,6 +316,7 @@ button.is-primary:hover {
     justify-content: var(--start);
     margin-right: 0;
     margin-left: 40px;
+    right: auto; /* Override Bootstrap */
 }
 
 .carousel-indicators li { /* Override Bootstrap */
@@ -367,9 +368,10 @@ button.is-primary:hover {
     /* background-color: seagreen; */
     margin-top: auto;
     margin-left: auto;
+    margin-bottom: -7px;
     display: flex;
     align-items: var(--center);
-    margin-right: 10px;
+    line-height: 1;
 }
 
 .login__carousel__button,
@@ -396,17 +398,20 @@ button.is-primary:hover {
     /* background-color: lightblue; */
     display: flex;
     justify-content: space-between;
-    width: 125px;
     margin-left: 20px;
 }
 
-/* .login__carousel__social__item {
-    background-color: lightcoral;
+.login__carousel__social__item {
+    margin-right: 15px;
 }
 
 .login__carousel__social__item:nth-child(even) {
-    background-color: lightgreen;
-} */
+    margin-left: -10px;
+}
+
+.login__carousel__social__item:last-child {
+    margin-right: 0;
+}
 
 .login__carousel__social__item svg {
     width: 40px;
